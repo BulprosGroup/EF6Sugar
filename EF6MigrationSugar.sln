@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6MigrationSugar.DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ef6MigrationSugar.Models", "Ef6MigrationSugar.Models\Ef6MigrationSugar.Models.csproj", "{E3176803-678F-4267-ACAC-47B04EB5544D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF672A7C-5C7B-4B41-B5AF-C40BC80A1005}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		201802261814465_Create DB.sql = 201802261814465_Create DB.sql
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

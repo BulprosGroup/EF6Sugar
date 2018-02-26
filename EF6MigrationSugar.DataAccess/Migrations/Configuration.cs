@@ -1,6 +1,7 @@
 namespace EF6MigrationSugar.DataAccess.Migrations
 {
     using Ef6MigrationSugar.Models;
+    using EF6MigrationSugar.DataAccess.Generators;
 
     using System;
     using System.Collections.Generic;
@@ -11,7 +12,13 @@ namespace EF6MigrationSugar.DataAccess.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            this.AutomaticMigrationsEnabled = false;
+
+            // register custom code generator for the c# generated code of the migration
+            this.CodeGenerator = new CustomMigrationCodeGenerator();
+
+            // register custom SQL generator for the SQL script generated of the migration
+            this.SetSqlGenerator("System.Data.SqlClient", new CustomMigrationSqlGenerator());
         }
 
         protected override void Seed(EF6MigrationSugar.DataAccess.MovieContext context)

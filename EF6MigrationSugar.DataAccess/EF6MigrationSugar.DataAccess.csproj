@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\CustomMigrationCodeGenerator.cs" />
+    <Compile Include="Generators\CustomMigrationSqlGenerator.cs" />
+    <Compile Include="Migrations\201802261814465_Create DB.cs" />
+    <Compile Include="Migrations\201802261814465_Create DB.Designer.cs">
+      <DependentUpon>201802261814465_Create DB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MovieContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,6 +66,11 @@
       <Project>{e3176803-678f-4267-acac-47b04eb5544d}</Project>
       <Name>Ef6MigrationSugar.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802261814465_Create DB.resx">
+      <DependentUpon>201802261814465_Create DB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
